@@ -1,17 +1,23 @@
 import pyrebase
 
 config = {
-    "apiKey": "",
-    "authDomain": "",
-    "databaseURL": "",
-    "projectId": "",
-    "storageBucket": "",
-    "messagingSenderId": ""
+    "apiKey": "AIzaSyB_k9SPujVHdm-8EHwuy9OQU1AEAhBA4Ro",
+    "authDomain": "irisscan-94a4e.firebaseapp.com",
+    "databaseURL": "https://irisscan-94a4e-default-rtdb.firebaseio.com",
+    "projectId": "irisscan-94a4e",
+    "storageBucket": "irisscan-94a4e.appspot.com",
+    "messagingSenderId": "157605262331",
+    "appId": "1:157605262331:web:9f18539654fca271a7515e",
+    "measurementId": "G-BW0H8V7E2D"
 }
 
 firebase = pyrebase.initialize_app(config)
 
 storage = firebase.storage()
+
+auth=firebase.auth()
+
+login = auth.sign_in_with_email_and_password("yuvalabs@gmail.com", "shambo1234&")
 
 from flask import *
 
