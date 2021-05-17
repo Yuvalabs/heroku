@@ -17,7 +17,10 @@ storage = firebase.storage()
 
 auth=firebase.auth()
 
-login = auth.sign_in_with_email_and_password("yuvalabs@gmail.com", "shambo1234&")
+try:
+    login = auth.sign_in_with_email_and_password("yuvalabs@gmail.com", "shambo1234&")
+except:
+    print("hello")
 
 from flask import *
 
