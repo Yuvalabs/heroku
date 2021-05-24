@@ -40,7 +40,7 @@ def uploads():
     if request.method == 'POST':
         return redirect(url_for('basic'))
     if True:
-        links = storage.child('Images/new.png').get_url(None)
+        links = storage.child('Images/2.jpg').get_url(None)
         return render_template('upload.html', l=links)
     return render_template('upload.html')
 
